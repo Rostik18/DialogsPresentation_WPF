@@ -1,0 +1,45 @@
+﻿<Window x:Class="DialogsPresentation_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DialogsPresentation_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <ListView Name="PeopleList" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Width="100">Ім'я</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Age}" Width="100">Вік</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Workplace}" Width="100">Місце роботи</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock TextWrapping="Wrap" Text="Введіть ім'я"/>
+            <TextBox Name="NameBox" Height="23" TextWrapping="Wrap" />
+
+            <TextBlock TextWrapping="Wrap" Text="Введіть вік"/>
+            <TextBox Name="AgeBox" Height="23" TextWrapping="Wrap" />
+
+            <TextBlock TextWrapping="Wrap" Text="Введіть місце роботи"/>
+            <TextBox Name="WorkplaceBox" Height="23" TextWrapping="Wrap"/>
+
+
+            <Button Content="Додати" Click="Button_Click"/>
+            <Button Content="Вилучити" Click="Button_Click_1"/>
+            <Button Content="Завантажити базу даних"/>
+            <Button Content="Оновити базу даних"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
