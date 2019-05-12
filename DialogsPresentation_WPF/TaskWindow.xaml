@@ -1,0 +1,20 @@
+﻿<Window x:Class="DialogsPresentation_WPF.TaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DialogsPresentation_WPF"
+        mc:Ignorable="d"
+        Title="TaskWindow" Height="200" Width="400">
+    <Grid>
+        <TextBox Name="numb1" HorizontalAlignment="Left" Height="23" Margin="20,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80"/>
+        <TextBox Name="numb2" HorizontalAlignment="Center" Height="23" Margin="0,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80"/>
+        <TextBox Name="numb3" HorizontalAlignment="Right" Height="23" Margin="0,35,20,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80"/>
+        <Label Content="+" HorizontalAlignment="Left" Margin="121,32,0,0" VerticalAlignment="Top"/>
+        <Label Content="=" HorizontalAlignment="Left" Margin="258,32,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="147,100,146.6,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Label Name="MesgLab" HorizontalAlignment="Left" Margin="129,76,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>

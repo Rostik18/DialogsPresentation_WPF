@@ -18,19 +18,16 @@ namespace DialogsPresentation_WPF
 {
     public partial class MainWindow : Window
     {
-        List<Person> people;
-        internal List<Person> People { get => people; set => people = value; }
-
-        PersonContext Db;
         public MainWindow()
         {
             InitializeComponent();
-            Db = new PersonContext();
+
 
             //Login();
-            People = new List<Person>();
-            PeopleList.ItemsSource = People;
-
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Login();
         }
 
         private void Login()
@@ -39,7 +36,7 @@ namespace DialogsPresentation_WPF
 
             if (passwordWindow.ShowDialog() == true)
             {
-                if (passwordWindow.Password == "12345678")
+                if (passwordWindow.Password == "1234")
                     MessageBox.Show("Авторизацiя пройдена.");
                 else
                 {
@@ -54,66 +51,17 @@ namespace DialogsPresentation_WPF
             }
         }
 
-        private void GetFromDb()
-        {
-            People = Db.People.ToList();
-            PeopleList.Items.Refresh();
-        }
-
-        //Add Button
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                string name = NameBox.Text;
-                int age = int.Parse(AgeBox.Text);
-                string workplace = WorkplaceBox.Text;
+            TaskWindow taskWindow = new TaskWindow();
 
-                Person person = new Person() { Name = name, Age = age, Workplace = workplace };
+            //taskWindow.Param = 5;
+            //taskWindow.Owner = this;
 
-                People.Add(person);
+            taskWindow.Show();
 
-                PeopleList.Items.Refresh();
-            }
-            catch
-            {
-                MessageBox.Show("Заповніть поля коректно!");
-                return;
-            }
+
+            // this.OwnedWindows - колекція всіх залежних вікон.
         }
-        //Remove Button
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                string name = NameBox.Text;
-                int age = int.Parse(AgeBox.Text);
-                string workplace = WorkplaceBox.Text;
-
-                Person person = new Person() { Name = name, Age = age, Workplace = workplace };
-
-                People.Remove(person);
-
-                //if ( == true)
-                //    MessageBox.Show("Не вдалося видалити об'єкт.");
-
-                PeopleList.Items.Refresh();
-            }
-            catch
-            {
-                MessageBox.Show("Заповніть поля коректно!");
-                return;
-            }
-        }
-
-
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Db.SaveChanges();
-            Db.Dispose();
-        }
-
-
     }
 }

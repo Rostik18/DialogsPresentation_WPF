@@ -20,3 +20,5 @@ C:\Users\Ростик\source\repos\DialogsPresentation_WPF\DialogsPresentation_W
 C:\Users\Ростик\source\repos\DialogsPresentation_WPF\DialogsPresentation_WPF\bin\Debug\EntityFramework.xml
 C:\Users\Ростик\source\repos\DialogsPresentation_WPF\DialogsPresentation_WPF\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Ростик\source\repos\DialogsPresentation_WPF\DialogsPresentation_WPF\obj\Debug\DialogsPresentation_WPF.csproj.CopyComplete
+C:\Users\Ростик\source\repos\DialogsPresentation_WPF\DialogsPresentation_WPF\obj\Debug\TaskWindow.g.cs
+C:\Users\Ростик\source\repos\DialogsPresentation_WPF\DialogsPresentation_WPF\obj\Debug\TaskWindow.baml

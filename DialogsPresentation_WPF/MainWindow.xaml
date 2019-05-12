@@ -5,40 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DialogsPresentation_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+        Title="MainWindow" Height="300" Width="400" Loaded="Window_Loaded">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
 
-        <StackPanel>
-            <ListView Name="PeopleList" >
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Width="100">Ім'я</GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding Path=Age}" Width="100">Вік</GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding Path=Workplace}" Width="100">Місце роботи</GridViewColumn>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </StackPanel>
-        <StackPanel Grid.Column="1">
-            <TextBlock TextWrapping="Wrap" Text="Введіть ім'я"/>
-            <TextBox Name="NameBox" Height="23" TextWrapping="Wrap" />
-
-            <TextBlock TextWrapping="Wrap" Text="Введіть вік"/>
-            <TextBox Name="AgeBox" Height="23" TextWrapping="Wrap" />
-
-            <TextBlock TextWrapping="Wrap" Text="Введіть місце роботи"/>
-            <TextBox Name="WorkplaceBox" Height="23" TextWrapping="Wrap"/>
-
-
-            <Button Content="Додати" Click="Button_Click"/>
-            <Button Content="Вилучити" Click="Button_Click_1"/>
-            <Button Content="Завантажити базу даних"/>
-            <Button Content="Оновити базу даних"/>
-        </StackPanel>
+        <Button Content="Кнопка" HorizontalAlignment="Center" Margin="147,100,146.6,0" 
+                VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click" />
 
 
     </Grid>
